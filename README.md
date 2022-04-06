@@ -99,8 +99,8 @@ This is the fastest way to get up and running with a new Redis Enterprise on Kub
 4. Run ```kubectl get rec``` and verify creation was successful. `rec` is a shortcut for RedisEnterpriseCluster. The cluster takes around 5-10 minutes to come up.
     A typical response may look like this:
     ```
-    NAME  AGE
-    rec   5m
+    NAME   NODES   VERSION     STATE     SPEC STATUS   LICENSE STATE   SHARDS LIMIT   LICENSE EXPIRATION DATE   AGE
+    rec    3       6.2.10-90   Running   Valid         Valid           4              2022-05-06T06:41:51Z      13m
     ```
     > Note: Once the cluster is up, the cluster GUI and API could be used to configure databases. It is recommended to use the K8s REDB API that is configured through the following steps. To configure the cluster using the cluster GUI/API, use the ui service created by the operator and the default credentials as set in a secret. The secret name is the same as the cluster name within the namespace.
 5. Redis Enterprise Database (REDB) Admission Controller:
